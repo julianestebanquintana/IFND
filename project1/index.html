@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Here’s what I've learned at Udacity!</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<header class="info">
+			<h1>Here’s what I have learned at <a href="http://www.udacity.com">Udacity</a>!</h1>
+			<nav>
+				<ul id="contents">
+					<li><a href="#lesson1">Internet, html and css.</a></li>
+					<li><a href="#lesson2">Hyper Text Markup Language.</a></li>
+					<li><a href="#lesson3">Cascading Style Sheet.</a></li>
+					<li><a href="#lesson4">Computer science and programming</a></li>
+					<li><a href="#lesson5">Python variables and strings</a></li>
+					<li><a href="#lesson6">Functions and procedures</a></li>
+					<li><a href="#lesson7">Flow control: if, while</a></li>
+					<li><a href="#lesson8">Debugging</a></li>
+					<li><a href="#lesson9">Structured data types: lists</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="lesson" id="lesson1">
+			<h2>Internet, html and css.</h2>
+			<p class="idea">
+				To communicate with computers and make them do whatever is needed, we use programming languages; these have a different set of rules (syntax) than natural languages, to avoid imprecisions, because computers are “silly”, so they need precise instructions. 
+			</p>
+			<p class="idea">
+				Internet is a network of computers, they communicate with each other through a protocol called http, and they transfer files from one to another. Most important transferred files are in html format, but they can transfer any kind of file.
+			</p>
+			<p class="idea">
+				Html gives to web pages the structure; the elements in it are tree-like, meaning that there is a branching pattern. CSS is a different language, used to give style to the web sites. 
+			</p>
+		</section>
+
+		<section class="lesson" id="lesson2">
+			<h2>Hyper Text Markup Language.</h2>
+			<p class="idea">
+				The basic HTML element format is: <code> &lt; opening-tag > content &lt; closing-tag > </code>, although there are some tags without closing tag, called void tags (<code>br</code>, <code>hr</code>, <code>img</code> and other self contained elements). Some tags have also attributes, like <code>class</code> or <code>id</code>. In html everything is considered a box, and some boxes are inside bigger boxes (the branching pattern). There are tags that make this boxes, called block tags; but there are also tags that give structure to elements in the html without splitting it from the rectangle in which it is, and are called inline elements.
+			</p>
+			<p class="idea">
+				<code>Span</code> is used to select an inline element, while <code>div</code> forms blocks. <code>Class</code> is an attribute used for multiple alike elements, while <code>id</code> gives name to one element and must not be repeated in the same html (css allows it, but javascript will have troubles and is not considered valid). Besides <code>div</code> and <code>p</code>, there are other semantical tags, which are useful to make webpages more accesible (<a href="http://html5doctor.com/lets-talk-about-semantics/">ref</a>). It is a good idea to name classes in a way that whoever is reading the code can have a good idea of what he can find in that block.
+			</p>
+			<p class="idea">
+				The HTML tree-like structure, where one has branches going down the document (or boxes containing other boxes, if better understood) is modeled by the Document Object Model (DOM). The DOM is an API implemented in every browser to handle the structure of web pages(<a href="http://stackoverflow.com/questions/24466038/document-tree-is-the-same-as-dom">ref</a>); it models every element of an HTML document as an object, which can be parent or child of other objects, and allowing the manipulation of these objects by other languages, like CSS o JS, as required. (<a href="https://www.w3.org/TR/DOM-Level-2-Core/introduction.html">ref</a>)
+			</p>
+		</section>
+
+		<section class="lesson" id="lesson3">
+			<h2>Cascading Style Sheet.</h2>
+			<p class="idea">
+				Css goes down through every element (Cascading) and applies the most specific rule to it. In the computer sciences, there is an abstract concept called inheritance; is a mechanism by which properties asigned to an element are applied to itself and its “descending” elements. Generally speaking, text properties are inherited, box related properties are not inherited. This idea is important, since it avoids repetition.
+			</p>
+			<p class="idea">
+				In css we use the selectors, which are called so because they permit to choose the element for style application. They are composed by the name of the tag (<code>p</code>, <code>div</code>, ...); the attributes can also be used as selectors using dot and the name of the attribute (for example, the class name): <code> .description {} </code>.(<a href="https://css-tricks.com/how-css-selectors-work/">ref</a>). After the selector, between brackets, come the styling rules that will be applied to the selected elements. The property chosen to be changed is written between the brackets in the way: attribute colon value semicolon.
+			</p>
+			<p class="idea">
+				There are three methods to include style:
+				<ul>
+					<li>To include CSS in the html head, using the style tag.</li>
+					<li>To link a css file as a separate stylesheet, using the link tag in the html head.</li>
+					<li>To write the style inline as a tag attribute, which is not a preferred method.</li>
+				</ul>
+			</p>
+			<p class="idea">
+				Every element is considered part of a box, and every box is modeled as having, from outside to inside: margin, border, padding, content. Each of these can be modified to give the needed style.
+			</p>
+		</section>
+
+		<section class="lesson" id="lesson4">
+			<h2>Computer science and programming</h2>
+			<p class="idea">
+				Computational science is about how to solve problems. Programming is the main thing in computational science. Most of the human made machines are designed to accomplish only one single work. Computers by themselves can’t accomplish any labor; but computers with programs, can do a lot of different things. A computer program is a simple sequence of instructions, sequence that the computer must follow closely; these different instructions are made using a programming language, and python is just one of them.</p> 
+			<p class="idea">
+				Programming languages are different from natural languages in that are less verbose, less redundant and specially unambiguous, as well as space saving. Most languages today have a set of rules (a syntax) described as Backus – Naur form; they are composed by “expressions”, being an expression an abstract concept that has some value. The expressions can be combined by the construction “&lt;non-terminal> -> replacement”, where the arrow signals an assignment operation.</p>
+			<p class="idea">
+				Every expression can be successively replaced until it gets to a terminal value, where it can be no longer replaced. Some other rules come from this construct, like “expression -> expression operator expression”, “expression -> number” or “expression -> (expression)”; notice that all of these keep the same pattern of the original construct “&lt;non-terminal> -> replacement”. A recursive definition requires at least a set of two definitions; otherwise, it would be circular, that being a meaningless definition.</p>
+		</section>
+
+		<section class="lesson" id="lesson5">
+			<h2>Python variables and strings</h2>
+			<p class="idea">
+				A variable is a name that refers to a value. In python, a variable is assigned using the form <code>“&lt;variable name> = expression”</code>, where “=” corresponds to the assignment symbol. As a convention, the first letter of the variable must be lowercase. Care must be taken to avoid confusing mathematical “equal to” with the assignment operator “=” used in python.</p>
+			<p class="idea">
+				In python, text is represented as a string, which is a sequence of characters (letters, digits and symbols); strings can contain any number of characters. A string is built by surrounding text by single or double quotes.</p>
+			<p class="idea">
+				The operator “+”, when used with two strings, concatenates them; also, using the operator “*” for multiplying a string times an integer, produces a bigger string composed of multiple times the initial string. Strings can be indexed and sliced; in python, the first component the string is indexed as zero. The method for indexation is <code>“string[expression]”</code>, where expression is anything that evaluates to a number. The way to slice is <code>“string[expression1:expression2]”</code>, and the slice includes the characters from <code>“string[expression1]”</code> to <code>“string[expression2 – 1]”</code>.</p>
+			<p class="idea">
+				The method <code>“string.find(str)”</code> produces the position where first occurs the substring str in string, or returns -1 if it is not found. The print function sends an output to the console. To manufacture a multiline string, that includes returns and spaces, triple single quotes or triple double quotes are used.</p>		
+		</section>
+
+		<section class="lesson" id="lesson6">
+			<h2>Functions and procedures</h2>
+			<p class="idea">
+				Functions are procedures that are used frequently used, so instead of declaring them every time it is needed, it is defined in a generical way, and easily called when desired. To define a function the structure is: 
+				<pre><code>
+					def nameFunction (parameters):
+						procedure 
+						return xxx</code></pre>
+			</p>
+			<p class="idea">
+				And to use the function, is called by the name and passing it the necessary arguments. In this case <code>x = nameFunction(parameters)</code>, it returns xxx, which will be kept in a variable x. Every function has inputs and outputs. To get an output from a function, it must return something.
+			</p>
+			<p class="idea">
+				If a variable is passed to a function, it does not get modified as a result of the function; the variables defined inside the function, that is, that are local to the function, are encapsulated and won’t exist outside the function.
+			</p>
+		</section>
+
+		<section class="lesson" id="lesson7">
+			<h2>Flow control: if, while</h2>
+			<p class="idea">
+				In order to make decisions, it is used the if construct, which evaluates a test expression and, according to its value (<code>True</code> or <code>False</code>) performs the instructions of one block or another.  The way the if is built is:
+				<pre><code>
+					if &lt;test expresion>:
+						&lt;block>
+					else:
+						&lt;else block></code></pre>
+			</p>
+			<p class="idea">
+				The test expression is usually constructed with less than (&lt;), more than (>), is equal to (==), is different to (!=). The end of the block is determined by indentation. “or” and “and” can also be used to evaluate the test expression. 
+				To perform a repetitive action, the “while” loop is used; is constructed like this: 
+				<pre><code>
+					while &lt;test expression>:
+						&lt;block></code></pre>
+			</p>
+			<p class="idea">
+				The block is executed while the text expression is true, and when it changes, the block execution stops; in order to avoid that a block keeps going forever, in every iteration of the block, something must change. Sometimes, an index variable is used to keep track of the execution, and when it reaches a certain value, it makes the test expression False, so the loop execution stops. The while loop can perform some instruction multiple times, but if can perform it only once. One way to make a while stop is putting a <code>break</code> inside it. </p>
+		</section>
+
+		<section class="lesson" id="lesson8">
+			<h2>Debugging</h2>
+			<p class="idea">
+				While programming is unavoidable to have mistakes; its very important to develop a programming technique that allows to find easily the mistakes, and a method to find and correct programming mistakes systematically. The methodology to find and correct mistakes is called debugging, and it has some important steps:</p>
+			<p class="idea">
+				<ul>
+					<li>
+						Read the error message; in python, the error message gives a type of error and number of line where execution stopped; although the error can be found there, it can also be upstream.
+					</li>
+					<li>
+						One option is to copy a similar function, and approach to the needed function, changing the function, step by step, one small part every time, evaluating what happens when every small thing is changed.
+					</li>
+					<li>
+						If one is using third parties code and things are not working, it is necessary to go back to the shared code and evaluate if every part is doing what it is supposed to be doing.
+					</li>
+					<li>
+						Bugs that don’t stop code execution are harder to find and make programs work erratically; if one is not getting the expected results, it is useful to print intermediate results. 
+					</li>
+					<li>
+						Sometimes, code works partially; if one gets to a point where major changes must be done, one can screw up what is really working, so it is really important to not loose what is working well; it is preferable to comment the original code, save a copy or use version controllers, like git.
+					</li>
+				</ul>
+			</p>
+			<p class="idea">
+				Recapitulating the debugging strategy: error messages must be examined, work from example code doing small step modifications, get sure that code from third parties work correctly, print intermediate results, and keep and compare old versions.
+			</p> 
+			<p class="idea">
+				Comments are very useful when debugging; single line comments are made with #, and docstrings are made with triple single quotes; docstrings are multiple line comments that the python interpreter retains as function documentation. Comments must be kept updated, while code is modified. The idea is that code must be concise, always consistent with the style chosen to document the code, and must give important information; that is, the obvious must not be commented.
+			</p>	
+		</section>
+
+		<section class="lesson" id="lesson9">
+			<h2>Structured data types: lists</h2>
+			<p class="idea">
+				String is data type that is structured; it is a sequence of characters that can be split into smaller pieces (characters). But strings aren’t complex enough, not everything can be done with a string, so python implements ‘bigger’ structured data types. Lists are sequences of anything; in python, they are formed with square brackets, and list elements are separated by commas: <code>&lt;list> = [&lt;expresion>, &lt;expresion>, …]</code>. List elements are indexed in the same way that strings. Lists can nest other lists inside of them.
+			</p>
+			<p class="idea">
+				Lists are mutable, that meaning it may be modified after being created. Strings are not mutable; elements can be appended to strings, but they form a new string, won’t modify the original. This seemingly subtle difference gets more notorious if one introduces a new variable and assigns it to same object: if a list changes with one name, also changes with the other; this is called aliasing: there are two ways to call the same object. Functions can’t change the values of strings or numbers outside themselves, but can mutate list elements.
+			</p>
+		</section>
+
+		<footer class="info">
+			Developed by <a href="mailto:julianestebanquintana@gmail.com">Julian Quintana</a>, from Medellin - Colombia <br> 
+			Following the Udacity IPND instructions and <a href="http://codepen.io/afumagalli/pen/dYgPRb">this</a> example<br>
+			Validated at <a href="https://validator.w3.org">W3C</a> 
+		</footer>
+	</body>
+</html>

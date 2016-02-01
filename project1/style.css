@@ -1,0 +1,47 @@
+body {
+	background-color: #002266;
+	font-family: sans-serif;
+}
+
+.lesson { 
+	background-color: #b3cdff;
+	padding: 10px;
+	margin: 20px;
+	border-radius: 10px;
+}
+
+h1 {
+	font-size: 30px;
+	color: #e5eeff;
+	text-align: left;
+}
+
+h2 {
+	font-size: 20px;
+	/*color: ;*/
+}
+
+.idea {
+	font-size: 15px;
+	color: #00091a;
+}
+
+.info {
+	background-color: #b3cdff; 
+	/*#3377ff;*/
+	padding: 10px;
+	margin: 20px;
+	border-radius: 10px;
+	font-size: 10px;
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+}
+
+
+
+/* Developed by Julian Quintana, from Medellin Colombia
+for the Udacity's Introduction to programming nanodegree, Project 1*/
+/* colors taken from http://www.w3schools.com/tags/ref_colorpicker.asp */
