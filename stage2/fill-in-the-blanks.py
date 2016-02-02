@@ -1,6 +1,6 @@
 #################### DEFINITION OF VARIABLES ######################
 
-lista = [['To communicate with computers and make them do whatever is needed, we use programming languages; these have a different set of rules than natural languages (called a ______).', 'syntax'], 
+questionary = [['To communicate with computers and make them do whatever is needed, we use programming languages; these have a different set of rules than natural languages (called a ______).', 'syntax'], 
 ['Internet is a network of computers, they communicate with each other through a protocol called ______, and they transfer files from one to another.', 'http'], 
 ['Html gives to web pages the structure; the elements in it are tree-like, meaning that there is a branching pattern. CSS is a different language, used to give ______ to the web sites.', 'style'], 
 ['The basic HTML element format is: < opening-tag > content < closing-tag > , although there are some tags without closing tag, called void tags. Some tags have also attributes, like class or id. In html everything is considered a box, and some boxes are inside bigger boxes (the branching pattern). There are tags that make this boxes, called block tags; but there are also tags that give structure to elements in the html without splitting it from the rectangle in which it is, and are called ______ elements.', 'inline'], 
@@ -33,68 +33,100 @@ lista = [['To communicate with computers and make them do whatever is needed, we
 ['String is a data type that is structured; it is a sequence of characters that can be split into smaller pieces (characters). But strings arent complex enough, not everything can be done with a string, so python implements bigger structured data types. ______ are sequences of anything; in python, they are formed with square brackets, their elements are separated by commas and are indexed in the same way that strings.', 'lists'], 
 ['Lists are ______, that meaning they can be modified after being created. Strings cant change after creation; elements can be appended to strings, but they form new strings, wont modify the originals. This seemingly subtle difference gets more notorious if one introduces a new variable and assigns it to same object: if a list changes with one name, also changes with the other; this is called aliasing: there are two ways to call the same object.', 'mutable']]
 
-wcome_msg = [ "Hello! Welcome to 'Test your knowledge of Programming'. ", "You will be exposed to some sentences, relating to the IPND of Udacity, lessons 1 & 2.", "Write your answers in lower case, and take well care of the spelling.", "When you finish typing your answer pulse Enter. Lets go!"]
+welcome_message = [ "Hello! Welcome to 'Test your knowledge of Programming'. ", "You will be exposed to some sentences, relating to the IPND of Udacity, lessons 1 & 2.", "Write your answers in lower case, and take well care of the spelling.", "When you finish typing your answer pulse Enter. Lets go!"]
 
-answers = []
-rt_answ = 0
+user_answers = []
+right_answers = [0,]
 
 #################### DEFINITION OF FUNCTIONS USED IN THE GAME ######################
 
+def list_slice(level, big_list):
+	""" Provided a chosen level, splits a list of questions and answers"""
+	if level == 1:
+		sliced_list = big_list[0:11]
+	elif level == 2:
+		sliced_list = big_list[11:20]
+	else:
+		sliced_list = big_list[20:]
+	return sliced_list
 
-def get_lvl():
-	''' Prompts the user to choose a game level from 1 to 3'''
+def get_level(big_list):
+	"""Prompts the user to choose a game level from 1 to 3"""
 	try:
-		lvl = int(input("Please enter the desired level, from 1 to 3: "))
-		if lvl > 0 and lvl < 4:
-			print "Now, starting with the level " + str(lvl)
-			return lvl
+		level = int(input("Please enter the desired level, from 1 to 3: "))
+		if level > 0 and level < 4:
+			print "Now, starting with the level " + str(level)
+			list1 = list_slice(level, big_list)
+			return list1
 		else:
 			print "Not in the desired range."
-			return get_lvl()
+			return get_level(big_list)
 	except:
 		print("Sorry, I didn't understand that.")
-		return get_lvl()
+		return get_level(big_list)
 
-def ask_for_answ():
-	''' Prompts the user to answer a question'''	
+def ask_for_answer():
+	"""Prompts the user to answer a question"""
 	answ = str(raw_input("What word replaces the SPACE in this sentence? "))
 	return answ
 
-def print_elem_list(lista):
-	''' Receives a list and prints it, one element at a time'''
-	for element in lista:
+def print_elem_list(list_x):
+	"""Receives a list and prints it, one element at a time"""
+	for element in list_x:
 		print element
 
+# def present_questions(list_y, answers, correct_answers):
+# 	""" Presents questions to the user, and takes note of the answers given by the user,
+# 	as well as of the quantitative qualification obtained by the user."""
+# 	for element in list_y:
+# 		print element[0]
+# 		print "   "
+# 		response = ask_for_answer()
+# 		answers.append([response])
+# 		if response == element[1]:
+# 			print "Congratulations! Right answer!"
+# 			correct_answers[0] += 1
+# 			print "   "
+# 		else:
+# 			print "Not the answer I was expecting. Try again"
+# 			print "   "
+
+def present_questions(list_y, answers, correct_answers):
+	""" Presents questions to the user, and takes note of the answers given by the user,
+	as well as of the quantitative qualification obtained by the user."""
+	for element in list_y:
+		print element[0]
+		print "   "
+		response = ask_for_answer()
+		answers.append([response])
+		if response == element[1]:
+			print "Congratulations! Right answer!"
+			correct_answers[0] += 1
+			print "   "
+		else:
+			print "Not the answer I was expecting. Try again"
+			print "   "
+
+def present_results(correct, given_answers, answers):
+	"""Given a number of correct answers, and a list of answers given by the student vs the list of the 
+	real answers, presents the amount of correct answers and gives the elements for comparisson between 
+	correct and wrong answers"""
+	print "You had " + str(correct[0]) + " right answers!" 
+	print "Your answers were: "
+	print_elem_list(given_answers)
+	print "The right answers were these: " 
+	for element in answers:
+		print element[1]
 
 #################### THIS IS THE PART THAT INTERACTS WITH THE USER ######################
-print_elem_list(wcome_msg)
-level = get_lvl()
+print_elem_list(welcome_message)
+questions = get_level(questionary)
+present_questions(questions, user_answers, right_answers)
+present_results(right_answers, user_answers, questions)
 
-if level == 1:
-	lista1 = lista[0:11]
-elif level == 2:
-	lista1 = lista[11:20]
-else:
-	lista1 = lista[20:]
 
-for element in lista1:
-	print element[0]
-	print "   "
-	respuesta = ask_for_answ()
-	answers.append([respuesta])
-	if respuesta == element[1]:
-		print "Congratulations! Right answer!"
-		rt_answ += 1
-		print "   "
-	else:
-		print "Not the answer I was expecting. Moving on..."
-		print "   "
 
-print "You had " + str(rt_answ) + " right answers!" 
-print "Your answers were: "
-print_elem_list(answers)
-print "The right answers were these: " 
-for element in lista1:
-	print element[1]
+
+
 
 #################### DEVELOPED BY JULIAN QUINTANA, FROM MEDELLIN - COLOMBIA ######################
