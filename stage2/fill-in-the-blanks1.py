@@ -75,6 +75,22 @@ def print_elem_list(list_x):
 	for element in list_x:
 		print element
 
+# def present_questions(list_y, answers, correct_answers):
+# 	""" Presents questions to the user, and takes note of the answers given by the user,
+# 	as well as of the quantitative qualification obtained by the user."""
+# 	for element in list_y:
+# 		print element[0]
+# 		print "   "
+# 		response = ask_for_answer()
+# 		answers.append([response])
+# 		if response == element[1]:
+# 			print "Congratulations! Right answer!"
+# 			correct_answers[0] += 1
+# 			print "   "
+# 		else:
+# 			print "Not the answer I was expecting. Try again"
+# 			print "   "
+
 def present_questions(list_y, answers, correct_answers):
 	""" Presents questions to the user, and takes note of the answers given by the user"""
 	for element in list_y:
