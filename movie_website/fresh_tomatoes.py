@@ -9,7 +9,54 @@ main_page_head = '''
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Fresh Tomatoes!</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <style type="text/css" media="screen">
+        body {
+            padding-top: 80px;
+        }
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+        }
+        .movie-tile {
+            margin-bottom: 20px;
+            padding-top: 20px;
+        }
+        .movie-tile:hover {
+            background-color: #EEE;
+            cursor: pointer;
+        }
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: white;
+        }
+    </style>
     <script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
         $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
@@ -75,23 +122,12 @@ main_page_content = '''
 
 # A single movie entry html template
 movie_tile_content = '''
-<article class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
-    <header>
-        <h2>{movie_title}</h2>
-        <h3>{spanish_title}</h3>
-        <p>{year}</p>
-        <p>{stars}</p>
-    </header>
-    <section class="movie_info">
-        <img src="{poster_image_url}" width="220" height="342">        
-        <p>
-            <div class="director">{director}</div>
-            <div class="cast">{cast1}, {cast2}</div>
-            <div class="sinopses">{storyline}</div>
-        </p>
-    </section>
-</article>
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
+    <img src="{poster_image_url}" width="220" height="342">
+    <h2>{movie_title}</h2>
+</div>
 '''
+
 
 def create_movie_tiles_content(movies):
     # The HTML content for this section of the page
@@ -107,16 +143,9 @@ def create_movie_tiles_content(movies):
 
         # Append the tile for the movie with its content filled in
         content += movie_tile_content.format(
-            movie_title = movie.movie_title,
-            poster_image_url = movie.poster_image,
-            trailer_youtube_id = trailer_youtube_id,
-            spanish_title = movie.spanish_title, 
-            storyline = movie.movie_storyline, 
-            year = movie.release_date, 
-            director = movie.director_name, 
-            cast1 = movie.protagonist1_name, 
-            cast2 = movie.protagonist2_name, 
-            stars = movie.stars 
+            movie_title=movie.movie_title,
+            poster_image_url=movie.poster_image,
+            trailer_youtube_id=trailer_youtube_id 
         )
     return content
 
