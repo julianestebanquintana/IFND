@@ -1,0 +1,378 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red36\green36\blue36;\red240\green240\blue240;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww10520\viewh14520\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 HTML da estructura\
+es como un \'e0rbol\
+Los elementos\
+\
+Tanto html como css son "lenguajes", html controla la estructura de la p\'e1gina y css controla el estilo\
+Hablar del DOM es referirse a la estructura tipo \'e1rbol de la p\'e1gina\
+\
+HTML tiene sintaxis y reglas\
+El elemento b\'e1sico del HTML es el tag, que forma el \'e1rbol, el DOM\
+elemento: tag contenido tagcierre ; tambi\'e9n pueden tener atributos (class="xxx")\
+CSS tbn sintaxis y reglas\
+\
+\
+\
+TODO en una p\'e1gina es una caja, pensar que todo es una caja, un cuadrado. Boxify?\
+\
+\
+Design mock???? \
+\
+Es buena idea darle nombres de clases que den idea de qu\'e9 trata, que den sentido.\
+\
+para usar hoja de estilo, agregar linea de link en head, agregar atributos: rel, type y href.\
+etiqueta style, para introducir los selectores css en el mismo html\
+\
+css: cascading style sheets\
+en css, la regla m\'e1s espec\'edfica es la que se aplica; se va bajando por las reglas, y la que aplica al elemento espec\'edfico es la que se aplica.\
+Esto es herencia (inheritance), y hace parte del pensamiento abstracto de las ciencias computacionales.\
+\
+selector de css es lo primero que se escribe, que escoge el elemento al que se aplica el estilo.\
+para escoger etiquetas, se pone la etiqueta y luego los \{\}:\
+p \{ \}\
+div \{ \}\
+tambi\'e9n se pueden escoger por clase (atributo class en las etiquetas); para eso, se pone primero punto y luego el nombre.\
+.description \{ \}\
+\
+entre los brackets, se utiliza la forma: \
+atributo : valor ;\
+\
+tres m\'e8todos para incluir estilo:\
+incluir css en el head, con el tag style\
+vincular html en un css separado\
+escribir el estilo en l\'ednea dentro del html como un atributo de las etiquetas (no es la mejor idea)\
+\pard\pardeftab720\sl460
+
+\f1\fs28 \cf2 In HTML, code comments begin with 
+\f2\fs26 \cb3 <!--
+\f1\fs28 \cb1  and end with 
+\f2\fs26 \cb3 -->
+\f1\fs28 \cb1 . Everything in between is ignored.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl460\sa300
+\ls1\ilvl0\cf2 In CSS, code comments begin with 
+\f2\fs26 \cb3 /*
+\f1\fs28 \cb1  and end with 
+\f2\fs26 \cb3 */.
+\f1\fs28 \cb1 \
+\pard\pardeftab720\sl460
+
+\f0\fs24 \cf0 \
+herencia: muy importante en css, mecanismo por el cual las propiedades se aplican al elemento especificado y a sus elementos descendientes, a trav\'e9s del \'e1rbol del documento. En general, se heredan los elementos de texto, pero no los elementos relacionados con las cajas. Evita la repetici\'f3n.\
+\
+span afecta los elementos en l\'ednea, div forma un bloque. id es un atributo de los bloques, que sirve para darles un nombre \'fanico, y se puede usar para usarlos para etiquetas para v\'ednculos y para estilo, class es para varios mientras id es para uno solo, un elemento puede tener class e id. se evita la repetici\'f3n. \
+\
+Modelo de la caja:\
+\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+lecci\'f3n 2:\
+Ciencia computacional es acerca de c\'f3mo resolver problemas.\
+P\'e1gina, es un documento de texto \'93especial\'94, un v\'ednculo es un tipo de texto que permite conectar a otro documento.\
+Programaci\'f3n es lo principal de la ciencia computacional. La mayor parte de las m\'e1quinas est\'e1n dise\'f1adas para hacer una sola cosa. Los programas le dicen al computador qu\'e9 hacer, sin este no hace nada, con la ayuda de programas puede hacer casi cualquier cosa. Los programas son secuencias sencillas de instrucciones. El computador puede hacer m\'faltiples instrucciones una tras otras.\
+M\'faltiples lenguajes, python es de alto nivel, tiene un int\'e9rprete. \
+Lenguajes naturales, son ambiguos; son \'93verbosos\'94, redundantes, requieren mucho texto\
+Backus-Naur form: Backus, programador de Fortran, desarroll\'f3 una forma de describir la sintaxis de los lenguajes de programaci\'f3n precisamente. \
+<non-terminal> -> replacement\
+Todas las reglas tienen la misma forma, y terminan cuando todas las partes llegan a ser terminales. \
+Expresi\'f3n es algo que tiene valor; \
+expresi\'f3n -> expresi\'f3n operador expresi\'f3n\
+expresi\'f3n -> numero\
+expresi\'f3n -> (expresi\'f3n)\
+Es una definici\'f3n recursiva, para que una definici\'f3n recursiva funcione se requiere al menos dos definiciones (sino ser\'eda circular)\
+\
+Admiral Grace Hopper, una de las primeras programadoras, invent\'f3 Cobol.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 Ada Augusta ada king, condesa de \'93lovelace\'94, 1815, primera programadora. M\'e1quina anal\'edtica de Babbage.\
+Alan Turing and enigma code, con aritm\'e9tica sencilla, comparaciones y procedimientos sencillos con if, se puede hacer cualquier computaci\'f3n posible.\
+\
+variable: assignment statement con nombre = expresi\'f3n . Las variables pueden \'93variar\'94. El = no es un igual, es un s\'edmbolo de asignaci\'f3n!\
+comments #\
+strings \'91 \'91 o \'93 \'93 , puedeser cualquiera, pero si uno empieza con una, termina con esa misma.\
+print\
+convenci\'f3n, primera letra downcase\
++ con strings, concatenation\
+indexar strings, empieza desde cero. string[expresion] donde expresi\'f3n es cualquier cosa que eval\'fae a un n\'famero. negativos, backwards.\
+seleccionar subsecuencias dentro del string: string[expresi\'f3n1:expresi\'f3n2], incluye lo que va desde str[exp1] hasta str[exp2 - 1!!!]\
+string.find(str) , m\'e9todo que devuelve la posici\'f3n donde se encuentra str en la string m\'e1s grande, o -1 si no la encuentra. Si se agrega otro par\'e1metro, un n\'famero, es la posici\'f3n en el string a partir del cual empezar\'e1 a buscarse.\
+\
+\
+se pueden poner triples comillas para una string de varias l\'edneas: \'93\'94\'94 \
+asdf\
+asdfasd\
+asdfasdf\'94\'94\'94\
+\
+string.replace()\
+\
+funci\'f3n\
+input\
+output\
+definici\'f3n vs utilizaci\'f3n de la funci\'f3n\
+es \'fatil poner print en la funci\'f3n para saber qu\'e9 ha pasado adentro, si s\'ed funciona debidamente\
+tiene que haber return\
+ojo, si uno pasa una variable a la funci\'f3n, la variable no se modifica por la funci\'f3n (es local, es diferente a la que hay afuera!).\
+\
+\
+to make decisions; comparaciones, con less than, more than, less or equal than\'85 \
+resultados: True or False.\
+ojo, == es diferente a =, recordar que = es asignaci\'f3n\
+\
+if:\
+if <test expresion> :\
+	<block>\
+else: \
+	<else block>\
+\
+indexaci\'f3n dice cu\'e1ndo se acaba el bloque.\
+\
+x > y or f == x \
+or!\
+\
+loops:\
+\
+while <test expression>:\
+	block\
+\
+if, 0 o 1 vez se ejecuta bloque; con while de 0 a m\'faltiples \
+\
+ojo, un while con un break, se sale del loop cuando llega al break.\
+\
+\
+debbuging: inevitablemente habr\'e1 errores, es muy importante desarrollar una metodolog\'eda para encontrarlos y corregirlos.\
+el mensaje de python ayuda a encontrar el error; pen\'faltima l\'ednea, el lugar donde puede estar el error ( ah\'ed o \'91upstream\'92), tambi\'e9n leer el tipo de error da la informaci\'f3n. \
+\
+str()\
+\
+una herramienta \'fatil para el debugging, es copiar funciones existentes, y empezarlas a cambiar paso por paso, hasta encontrar que funcione\'85\
+otra posibilidad es cuando se usa c\'f3digo de otras partes, si no funciona, hay que devolverse, y ver que cada parte funcione bien, a veces el error viene de all\'ed.\
+los bugs que no da\'f1an en el programa, son m\'e1s dif\'edciles. si se calculan valores incorrectos, una forma es partir el c\'e1lculo en partes, poniendo prints intermedios.\
+para hacer cambios, evitar borrar lo que ya se hizo! es preferible poner comentarios o hacer versiones diferentes para comentar. tambi\'e9n sirve hacer copias de seguridad. o llevar controladores de versi\'f3n como git. es muy buena estrategia.\
+\
+recapitulando debugging strategy:\
+examinar los mensajes de error, trabajar desde c\'f3digo de ejemplo modificando paso a paso, asegurarse de que los ejemplos funcionan, imprimir resultados intermedios y mantener y comparar las versiones viejas.\
+\
+comentarios: muy \'fatiles para debbuging.\
+no comentar lo obvio\
+todas las funciones deben comenzar con un comentario describiendo lo que hace la funci\'f3n, esto ayuda a otros a determinar para qu\'e9 se usa y c\'f3mo. \
+    single line: #\
+    docstring: \'91\'92\'92      \'91\'92\'92\
+        el docstring es un comentario multil\'edneas, que el computador retiene como documentaci\'f3n de la funci\'f3n. \
+los comentarios se deben mantener actualizando, a medida que se actualiza el c\'f3digo.\
+la idea es ser conciso, y consistente con el estilo escogido de documentar\
+\
+randint , funci\'f3n para obtener un random entero, se pasan dos par\'e1metros, el m\'e1s bajo y el m\'e1s alto, y entre ellos el random escoge.\
+from random import randint\
+\
+\
+structured data\
+str es un tipo de dato estructurado; es una secuencia de caracteres que se puede partir en pedazos m\'e1s peque\'f1os (caracteres).\
+Las listas son secuencias de cualquier cosa. Se forman en python con square bracket, con comas entre los elementos, con comillas para cada elemento. Se pueden indexar, devuelven el elemento completo. \
+<list> = [<expresion>, <expresion>, \'85]\
+lista = [\'91a\'92, \'91b\'92, \'91c\'92]\
+incluso las listas pueden tener otras listas. OJO, las listas tienen un orden!\
+para listas anidadas: lista[1][0]\
+mutation: se pueden cambiar los valores de las listas, despu\'e9s de haber sido creadas. Cuando se modifica un string previo, no se muta, lo que hace es que se crea una nueva diferente (con +). En general, no pareciera haber diferencia, pero es notorio cuando se introduce una nueva variable: si una variable refleja la lista, puede mutarla. \
+aliasing: cuando hay dos formas de llamar un objeto; si una lista se cambia, con un nombre, cambia con el otro. \
+Las funciones no pueden cambiar los valores de los string o de los n\'fameros; pero las listas s\'ed las puede modificar (es mutable!)\
+\
+\'97\'97\'97\
+\
+Stage 3\
+\
+\
+\
+\'97\'97\'97\
+\
+\
+Stage 4\
+\
+networks\
+\
+url\
+protocol http://\
+path asdf.asdf.com\
+port :\
+query ? &\
+fragment #\
+\
+http\
+method: GET, POST\
+path\
+version  1.1 (a veces 1.0)\
+request line\
+\
+GET, el m\'e1s usado para pedirle al servidor documentos; POST, el m\'e1s usado para mandar documentos al servidor.\
+\
+user agent\
+headers: name_without_spaces: value  -> user agent: chrome\
+\
+http responses: 200 ok, 302 found, 404 not found, 500 server error\
+\
+http/1.1 200 ok\
+date: tue mar asdfafasfd\
+server: apache/2.2.3  \'97> intentar no incluir!!! es demasiada informaci\'f3n\
+content-type: text/html\
+content-length: 1539\
+\
+\
+forms:\
+<input> : elemento html para ingresar\
+\
+debe ir dentro de <form> </form>\
+\
+<form>\
+<input name=\'93name\'94>\
+</form>\
+\
+cuando se pone un input y se da enter, cambia el url (query)\
+\
+un tipo de input:\
+<input type=\'93submit\'94> \'97> provee el bot\'f3n\
+\
+un atributo: action \
+<form action=\'93/foo\'94>\
+a d\'f3nde se va a enviar esa informaci\'f3n?\
+\
+form encoding, signos y espacios, se codifican porque los url no pueden tener espacios o ciertos caracteres.\
+type=\'93text\'94 es el default; \'93password\'94 cambia los caracteres, pero no se env\'eda de manera segura al servidor (s\'f3lo sirve para que nadie vea por encima del hombro; type=\'93checkbox\'94 \'97> par\'e1metro aparece como q=on, si unchecked, no aparece. \'93radio\'94, ojo se dejan seleccionar todos\'97> no se comportan como un radio button, para esto TODOS tienen que tener el mismo atributo name pero diferente par\'e1metro en value, y para nombrarlo: label element\
+<label> asfasd\
+<input>\
+</label>\
+\
+el select element, produce un drop down; name=\'93x\'94\
+luego, elemento option, entre los tags va el texto, si no se a\'f1ade ning\'fan atributo, el valor de x=el texto, pero se le agrega un value a cada opci\'f3n, x=el value\
+\
+\'85\
+\
+\pard\pardeftab720\sa300
+
+\f3\fs28 \cf2 Regular expressions are a way of matching strings using symbols. The 
+\f2\fs26 \cb3 .
+\f3\fs28 \cb1  symbol is a catch-all, which allows us to match any single character. The 
+\f2\fs26 \cb3 *
+\f3\fs28 \cb1  symbol means the expression will match any number of characters which match the previous symbol. So if we have a 
+\f2\fs26 \cb3 /.*
+\f3\fs28 \cb1  , that will allow us to essentially match all strings that come after the last forward slash\
+
+\f0\fs24 \cf0 \'97\
+\
+\'97\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 Validation: In the server side, evaluate if what is being sent is useful.\
+\
+\
+\pard\pardeftab720\sa300
+
+\f2\fs26 \cf2 \cb3 work
+\f3\fs28 \cb1  contains an array of 
+\f2\fs26 \cb3 jobs
+\f3\fs28 \cb1 . Each 
+\f2\fs26 \cb3 job
+\f3\fs28 \cb1  object in 
+\f2\fs26 \cb3 jobs
+\f3\fs28 \cb1  should contain an 
+\f2\fs26 \cb3 employer
+\f3\fs28 \cb1 , 
+\f2\fs26 \cb3 title
+\f3\fs28 \cb1 , 
+\f2\fs26 \cb3 location
+\f3\fs28 \cb1 , 
+\f2\fs26 \cb3 dates
+\f3\fs28 \cb1  worked and 
+\f2\fs26 \cb3 description
+\f3\fs28 \cb1 .\
+
+\f2\fs26 \cb3 projects
+\f3\fs28 \cb1  contains an array of 
+\f2\fs26 \cb3 projects
+\f3\fs28 \cb1 . Each 
+\f2\fs26 \cb3 project
+\f3\fs28 \cb1  object in 
+\f2\fs26 \cb3 projects
+\f3\fs28 \cb1  should contain a 
+\f2\fs26 \cb3 title
+\f3\fs28 \cb1 , 
+\f2\fs26 \cb3 dates
+\f3\fs28 \cb1  worked, 
+\f2\fs26 \cb3 description
+\f3\fs28 \cb1 , and an 
+\f2\fs26 \cb3 images
+\f3\fs28 \cb1  array with URL strings for project images.\
+
+\f2\fs26 \cb3 bio
+\f3\fs28 \cb1  contains a 
+\f2\fs26 \cb3 name
+\f3\fs28 \cb1 , 
+\f2\fs26 \cb3 role
+\f3\fs28 \cb1 , 
+\f2\fs26 \cb3 welcomeMessage
+\f3\fs28 \cb1 , 
+\f2\fs26 \cb3 contacts
+\f3\fs28 \cb1  object and 
+\f2\fs26 \cb3 skills
+\f3\fs28 \cb1  array. The 
+\f2\fs26 \cb3 contacts
+\f3\fs28 \cb1  object should contain (but doesn't have to) a 
+\f2\fs26 \cb3 mobile
+\f3\fs28 \cb1  number, 
+\f2\fs26 \cb3 email
+\f3\fs28 \cb1  address, 
+\f2\fs26 \cb3 github
+\f3\fs28 \cb1  username, 
+\f2\fs26 \cb3 twitter
+\f3\fs28 \cb1  handle and 
+\f2\fs26 \cb3 location
+\f3\fs28 \cb1 .\
+
+\f2\fs26 \cb3 education
+\f3\fs28 \cb1  contains an array of 
+\f2\fs26 \cb3 schools
+\f3\fs28 \cb1 . Each 
+\f2\fs26 \cb3 school
+\f3\fs28 \cb1  object in 
+\f2\fs26 \cb3 schools
+\f3\fs28 \cb1  contains a 
+\f2\fs26 \cb3 name
+\f3\fs28 \cb1 , 
+\f2\fs26 \cb3 location
+\f3\fs28 \cb1 , 
+\f2\fs26 \cb3 degree
+\f3\fs28 \cb1 , 
+\f2\fs26 \cb3 majors
+\f3\fs28 \cb1  array, 
+\f2\fs26 \cb3 dates
+\f3\fs28 \cb1  attended and a 
+\f2\fs26 \cb3 url
+\f3\fs28 \cb1  for the school's website. 
+\f2\fs26 \cb3 education
+\f3\fs28 \cb1  also contains an 
+\f2\fs26 \cb3 onlineCourses
+\f3\fs28 \cb1  array. Each 
+\f2\fs26 \cb3 onlineCourse
+\f3\fs28 \cb1  object in 
+\f2\fs26 \cb3 onlineCourses
+\f3\fs28 \cb1  should contain a 
+\f2\fs26 \cb3 title
+\f3\fs28 \cb1 , 
+\f2\fs26 \cb3 school
+\f3\fs28 \cb1 , 
+\f2\fs26 \cb3 dates
+\f3\fs28 \cb1  attended and a 
+\f2\fs26 \cb3 url
+\f3\fs28 \cb1  for the course.
+\f0\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \
+\
+\
+\
+}

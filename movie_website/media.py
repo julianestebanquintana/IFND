@@ -1,7 +1,7 @@
 import webbrowser
 		
 class Movie():
-	""" """
+	"""Instantiates an object that holds the information of every movie. """
 	def __init__(self, movie_title, spanish_title, poster_image, trailer_youtube, movie_storyline,   release_date,
 		director_name, protagonist1_name, protagonist2_name, stars):
 		self.movie_title = movie_title
@@ -15,5 +15,6 @@ class Movie():
 		self.protagonist2_name = protagonist2_name
 		self.stars = stars
 
-	def show_trailer(self):
+	def show_trailer(self): 
+		"""Method to open the trailer given as part of the movie object. """
 		webbrowser.open(self.trailer_youtube)
